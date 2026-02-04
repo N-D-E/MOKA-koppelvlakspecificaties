@@ -1,0 +1,156 @@
+<!-- ===================== -->
+<!-- Titelpagina -->
+<!-- ===================== -->
+
+![MOKA logo](./images/moka_logo.svg)
+
+# MOKA Koppelvlak Specificatie  
+## Examen-, beoordelings- en resultaatketen
+
+**Versie:** 0.9  
+**Datum:** 2026-02-04  
+**Status:** Concept  
+**Auteur:** MOKA / OKX  
+**Doelgroep:** Informatie­managers, architecten, functioneel ontwerpers
+
+---
+
+### Documentdoel
+
+Dit document beschrijft de MOKA koppelvlak specificatie voor de examen- en beoordelingsketen.  
+Het document is bedoeld om sectorbreed afspraken vast te leggen over betekenis, structuur en interactie van informatieobjecten, in samenhang met MORA en OKX.
+
+Het document richt zich op:
+- semantische eenduidigheid
+- herleidbaarheid van resultaten
+- ondersteuning van modulair en flexibel onderwijs
+
+---
+
+<div style="page-break-after: always;"></div>
+
+<!-- ===================== -->
+<!-- Versiehistorie -->
+<!-- ===================== -->
+
+## Versiehistorie
+
+| Versie | Datum       | Auteur        | Wijziging |
+|------:|------------|---------------|-----------|
+| 0.1   | 2026-01-15 | MOKA          | Eerste opzet informatiemodel |
+| 0.5   | 2026-01-28 | MOKA / OKX    | Uitbreiding beoordelings- en resultaatketen |
+| 0.8   | 2026-02-01 | MOKA          | Toevoegen objectdiagram en interactiepatronen |
+| 0.9   | 2026-02-04 | MOKA          | Conversie naar Markdown, demo-versie |
+
+---
+
+<div style="page-break-after: always;"></div>
+
+
+# 3 MOKA Koppelvlak Specificatie
+
+Dit document beschrijft de MOKA koppelvlak specificatie.  
+Het doel van deze specificatie is het eenduidig beschrijven van de informatie-uitwisseling tussen systemen binnen de examen- en beoordelingsketen, in samenhang met de MORA en OKX-afspraken.
+
+---
+
+## 3.1 MORA Procesplaatsing
+
+In het kader van de **MORA** beschrijft deze koppelvlak specificatie het in **rood gemarkeerde procesketengebied** binnen het MORA hoofdprocesmodel.
+
+Dit gebied omvat de processen rondom:
+- uitvoeren van examens
+- beoordelen van werk
+- vaststellen van resultaten
+- beheren van examendossiers
+- uitgifte van waardedocumenten
+
+![MORA hoofdprocesmodel – gemarkeerd ketengebied](./images/mora_procesplaatsing.png)
+
+---
+
+## 3.2 MOKA Koppelvlak Specificatie Viewpoint
+
+Het MOKA koppelvlak specificatie viewpoint richt zich op:
+- betekenisvolle informatieobjecten
+- hun onderlinge samenhang
+- en de interactiepatronen tussen systemen
+
+Het viewpoint is bedoeld voor informatiearchitecten, functioneel ontwerpers en informatiemanagers binnen onderwijsinstellingen.
+
+---
+
+### 3.2.1 Metamodel
+
+Binnen de **MORA** en de **MOKA**, en dus ook binnen dit specificatiedocument, wordt het onderstaande metamodel gehanteerd.
+
+Het metamodel beschrijft:
+- objecttypen
+- gegevensgroepen
+- gegevensgroeptypen
+- en relaties tussen objecten
+
+![Figuur 2 – MORA en MOKA metamodel met toelichting](./images/mora_moka_metamodel.svg)
+
+---
+
+### 3.2.2 MOKA Koppelvlak Specificatie View
+
+Deze view toont de samenhang tussen:
+- processen
+- informatieobjecten
+- en betrokken systemen
+
+De view maakt inzichtelijk:
+- waar informatie ontstaat
+- waar informatie wordt verrijkt
+- en waar formele vastlegging plaatsvindt
+
+![MOKA Koppelvlak Specificatie View](./images/moka_koppelvlak_view.png)
+
+---
+
+### 3.2.3 MOKA Koppelvlak specifiek informatiemodel view
+
+Deze view beschrijft het **logisch informatiemodel**, met focus op:
+- examenafname
+- te beoordelen werk
+- summatieve beoordeling
+- summatief resultaat
+- onderwijsresultaat
+- examendossier
+
+Het model is MIM-conform en gebruikt gegevensgroepen en gegevensgroeptypen om semantiek expliciet vast te leggen.
+
+![MOKA Informatiemodel View](./images/moka_informatiemodel_view.png)
+
+---
+
+### 3.2.4 MOKA Koppelvlak specifiek referentie objectdiagram view
+
+Deze view toont een **concreet objectdiagram**, gebaseerd op het informatiemodel.
+
+Het objectdiagram illustreert:
+- een voorbeeldinstantie van de keten
+- rollen van medewerkers (surveillant, beoordelaar, vaststeller)
+- aggregatie van resultaten
+
+![MOKA Referentie Objectdiagram](./images/moka_objectdiagram_view.png)
+
+---
+
+### 3.2.5 MOKA Koppelvlak interactiepatroon view
+
+Deze view beschrijft het **interactiepatroon** tussen systemen, waaronder:
+- toets- en examenafnamesystemen
+- beoordelingssystemen
+- studentvolgsystemen (SVS)
+- kernregistratiesysteem studenten (KRS)
+- documentmanagementsystemen (DMS)
+
+De interactiepatronen zijn richtinggevend voor:
+- koppelvlakontwerp
+- OOAPI-implementaties
+- en sectorafspraken binnen OKX
+
+![MOKA Interactiepatroon View](./images/moka_interactiepatroon_view.png)
