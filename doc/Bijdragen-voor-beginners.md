@@ -10,6 +10,25 @@ Neem ook [`Privacy-meetings-en-transcriptie.md`](Privacy-meetings-en-transcripti
 
 ---
 
+## Waar draait deze repository om?
+
+**OKx-meta** is de **gedeelde kennisbasis** waarmee we in de sector **keteninzicht** en **architectuurrichting** vastleggen — niet als los document, maar **versioned** samen met issues en PR’s. Het doel is dat **technische OKx-werkgroepen** (en leveranciers) **snel en gericht** kunnen uitwerken wat er op **koppelvlakken** moet gebeuren: o.a. **berichtspecificaties**, **klassendiagrammen** en **API-/OEAPI-beschrijvingen**, passend bij de keten en bij **MOKA**.
+
+Concreet hangen de belangrijkste “ankers” in deze repo zo samen:
+
+| Anker | Wat het is |
+|-------|------------|
+| **Hoofdplaat + tabel informatiestromen** | Richtinggevend overzicht: **welke** stromen tussen referentiecomponenten nog **conceptueel en technisch** beschreven moeten worden. Zie [OKx-projectoverzicht](OKx_Projectoverzicht.md) (*Hoofdplaat OKx informatiestromen*). |
+| **Ketenconcept (geen dubbeling van de tabel)** | Wat die stromen **betekenen** als keten en als **invoer** voor latere specs: [OKx Informatiestromen (ketenconcept)](OKx_Informatiesstromen.md). |
+| **MOKA-koppelvlak-view `01. Onderwijsvisie vertalen naar onderwijsaanbod - Basis Model`** | Grote **ArchiMate-diagram-view** in [`architecture/model/model.archimate`](../architecture/model/model.archimate) — verdieping van het koppelvlak volgens het **MOKA-metamodel** (proces en informatie in samenhang). Hoe je die vindt en leest: [Informatiestromen, ArchiMate en MOKA-view](OKx_Informatiestromen-ArchiMate-en-MOKA-view.md). |
+| **Informatiemodel** (zelfde koppelvlak) | In dezelfde map staat o.a. het diagram **`1.Onderwijsvisie vertalen naar onderwijs aanbod - Informatiemodel`** — focus op de **informatiestructuur** naast varianten als Klassiek en Flexibel. |
+
+Er is al inhoud voor een deel van de stromen; **veel andere stromen** uit de hoofdplaat moeten nog worden beschreven en daarna naar hetzelfde type **technische** deliverables worden vertaald. Zo voorkomen we **lokale eilandoplossingen** en houden we een **gedeeld minimum** in zicht — waarna onderdelen als **MORA** desgewenst via een **gericht wijzigingsverzoek** kunnen worden gevoed, niet via een omweg buiten het sectorproces om.
+
+**Architectuurbesluiten** (ADR’s) leggen de belangrijkste **keuzes** vast; zie [ADR’s — overzicht](../architecture/dr/README.md).
+
+---
+
 ## 1. Woordenlijst (heel kort)
 
 | Term | Betekenis |
