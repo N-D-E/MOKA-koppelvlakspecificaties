@@ -1,31 +1,42 @@
 # OKx Informatiestromen
 
-Dit document geeft een **opsomming van de informatiestromen** die binnen OKx worden onderscheiden. Iedere stroom leidt tot (of is gekoppeld aan) technische specificaties; waar mogelijk worden **OEAPI-profielen** of **consumers** benoemd.
+## Rol van dit document
 
-## Doel
+Hier leggen we **conceptueel** vast **wat** de informatiestromen in de onderwijslogistieke keten **doen** (welke informatie gaat waarheen, met welke bedoeling). Die beschrijving is **geen** eindproduct op zich: ze dient als **invoer** voor latere **technische koppelvlakuitwerking** — de **hoofdleverables** van OKx.
 
-- Inzicht in welke stromen er zijn en tussen welke partijen ze lopen.
-- Koppeling naar de MOKA-koppelvlakspecificaties en naar [OEAPI v6.0](https://openonderwijsapi.nl/v6.0/) waar van toepassing.
+Die technische uitwerking wordt straks vergelijkbaar met bestaande sectorpublicaties: o.a. **berichtspecificatie**, **klassendiagram**, **endpointbeschrijving**, en aansluiting op **[OEAPI](https://openonderwijsapi.nl/v6.0/)** waar passend. Een concreet voorbeeld van zo’n pakket (ander domein, wel vergelijkbaar type deliverable) is: [OKE MBO – toetsafname – concept specificaties (PDF, Edustandaard)](https://www.edustandaard.nl/app/uploads/2024/09/OKE-MBO-toetsafname-specs-v1.0_20240909conceptversie.pdf).
 
-## Bijlage 2: overzichtsfiguren
+**Kort gezegd:** architectuur en keteninzicht gebruiken we om **gericht** koppelvlakken **technisch** te specificeren — met **zicht op de hele keten**, zodat we **lokale optima** (eilandoplossingen per koppelvlak) vermijden en een **gedeeld minimum** aan afspraken bereiken.
 
-Voor het overzicht van informatiestromen en ketenrollen wordt verwezen naar:
+## De hoofdplaat als richting (welke stromen nog uitwerken)
 
-![Informatiestromen – hoofdplaat](../img/OKx_bijlage2_informatiestromen.png)
+De **hoofdplaat OKx informatiestromen** is de **richtinggevende** afbeelding: die maakt zichtbaar **welke** stromen tussen referentiecomponenten **nog** beschreven en gespecificeerd moeten worden. De interpretatie (nummers, componenten, prioriteit) staat in het **[OKx-projectoverzicht](OKx_Projectoverzicht.md)** onder *Hoofdplaat OKx informatiestromen* — daar is de **actuele** plaat en tabel leidend; dit document herhaalt die tabel niet.
 
-*Figuur: Informatiestromen – hoofdplaat (bijlage 2).*
+## Huidige uitwerking en wat nog moet
 
-Plaats het bestand in `OKx/img/` onder de naam `OKx_bijlage2_informatiestromen.png` zodat deze referentie werkt.
+Uitwerking gebeurt volgens de **MOKA-metamodel**-afspraken: **koppelvlakspecificatie-views**, en **andere MOKA-subproducten** (o.a. informatiemodel) waar nodig, aangevuld met **architectuurproducten** in het ArchiMate-model (zie [Informatiestromen, ArchiMate en MOKA-view](OKx_Informatiestromen-ArchiMate-en-MOKA-view.md)).
 
-## Relatie met technische specs en OEAPI
+**Status (indicatief):** er is al inhoudelijke uitwerking voor o.a. **stroom curriculumontwerp ↔ onderwijscatalogus**, **OC–Planning**, **OC–SVS**, en een **beperkt stuk** rond **Student kiest–KRS**. Er moet **nog veel** worden toegevoegd en verfijnd voor de overige stromen uit de hoofdplaat.
 
-| Informatiestroom | Technische specificatie(s) | OEAPI / overig |
-|------------------|---------------------------|----------------|
-| Examen – uitvoering en beoordeling | [MOKA koppelvlakspecificatie OKE](../../OKE/moka-koppelvlakspecificaties/Examen%20Uitvoering%20en%20beoordeling/doc/KoppelvlakSpecificatieDocument.md) | Waar mogelijk aansluiting op OEAPI-consumers en -profielen |
-| *(Overige stromen)* | *(Worden hier aangevuld na uitwerking)* | — |
+## Relatie tot MORA en architectuurgremia
 
-Deze tabel wordt uitgebreid wanneer meer subdomeinen en stromen zijn uitgewerkt.
+Deze uitwerking is **niet** bedoeld als **directe wijziging** van de MORA. We gebruiken **MOKA** als structuur zodat **architectuurgremia** (MORA, MOKA-koppelvlaklijn, enz.) **makkelijk kunnen aanhaken** en kunnen **adviseren**. Op termijn kan een gedragen OKx-uitwerking dienen als **gericht wijzigingsverzoek** richting MORA — niet als vervanging van het sectorproces, maar als onderbouwde input.
+
+## Architectuurbesluiten en impact
+
+De vastgelegde **architectuurrichting** (ADR’s, meetings) en impact op keten en model: **[OKx Architectuurbesluiten en impact](OKx_Architectuurbesluiten-en-impact.md)**.
+
+## Verwijzing naar (technische) specificaties en OEAPI
+
+
+| Informatiestroom                                                           | Sector Koppelvlak specificatie(s) MOKA uitwerking                                                                                                      | Originele sector specificatie                                                                                             | OEAPI Technische specificatie                                                                              |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Voorbeeld uitwerking Examen – uitvoering en beoordeling (gebaseerd op OKE) | [MOKA koppelvlakspecificatie OKE](../../OKE/moka-koppelvlakspecificaties/Examen%20Uitvoering%20en%20beoordeling/doc/KoppelvlakSpecificatieDocument.md) | [Originele sector specificatie](https://github.com/NetwerkExamineringDigitalisering/NED-OOAPI/tree/main/specification/v5) | [OEAPI-consumer](https://github.com/NetwerkExamineringDigitalisering/NED-OOAPI/tree/main/specification/v5) |
+| Overige stromen uit de hoofdplaat Okx                                      | Worden uitgewerkt naar hetzelfde type deliverables (MOKA + OEAPI waar passend)                                                                         | —                                                                                                                         | —                                                                                                          |
+
+
+Deze tabel wordt uitgebreid naarmate per stroom de technische bundel gereed is.
 
 ## Status
 
-Document in aanbouw. Aanvullingen en correcties graag via een issue of pull request.
+Document in aanbouw. Aanvullingen en correcties via issue of pull request; zie `[CONTRIBUTING.md](../CONTRIBUTING.md)`.

@@ -19,7 +19,11 @@ De projectaanpak van het OKx-kernteam volgt een vaste lijn van **begrijpen** naa
 
 ## Hoofdplaat OKx informatiestromen
 
-Het projectteam OKx wil de vraagstelling van de **sector** (van de instellingen) kanaliseren richting de **leveranciers** van onderwijsondersteunende software. De onderstaande hoofdplaat geeft een indicatie van alle informatiestromen die in samenwerking â€” en volgens de MOKA-koppelvlakspecificaties â€” uitgewerkt kunnen worden. Daarmee geeft ze richting en ondersteunt ze goed geïnformeerde architectuur- en technische besluiten.
+Het projectteam OKx wil de vraagstelling van de **sector** (van de instellingen) kanaliseren richting de **leveranciers** van onderwijsondersteunende software. De onderstaande hoofdplaat geeft een indicatie van alle informatiestromen die in samenwerking — en volgens de MOKA-koppelvlakspecificaties — uitgewerkt kunnen worden. Daarmee geeft ze richting en ondersteunt ze goed geïnformeerde architectuur- en technische besluiten.
+
+**Keten en concept (invoer voor technische specs):** wat de stromen in de keten betekenen en hoe dat richting geeft aan berichtspecificaties, klassendiagrammen en API-uitwerking, staat in [OKx Informatiestromen (ketenconcept)](OKx_Informatiesstromen.md).
+
+**Architectuur en model:** hoe besluiten en informatiestromen samenhangen met documentatie en het ArchiMate-model staat in [OKx Architectuurbesluiten en impact](OKx_Architectuurbesluiten-en-impact.md) en [Informatiestromen, ArchiMate en MOKA-view](OKx_Informatiestromen-ArchiMate-en-MOKA-view.md).
 
 **In de plaat: rood = eerste prioriteit.**
 
@@ -27,7 +31,7 @@ Het projectteam OKx wil de vraagstelling van de **sector** (van de instellingen)
 
 ### Interpretatie van de informatiestromen (uit de hoofdplaat)
 
-De onderstaande tabel interpreteert de plaat **"Hoofdplaat OKx informatiestromen v20260317.png"**. Alleen de flowlijnen die **niet blauw** (procedureel) en **niet oranje** (o.a. OKE/Edubroker) zijn, zijn opgenomen â€” dit zijn de informatiestromen die verder gespecificeerd moeten worden. De semantische beschrijving op of bij elke lijn in de plaat is overgenomen en waar nodig kort uitgebreid. **Context:** linkervlak = onderwijsontwikkeling, inrichting van nominale- en keuze aanbod; rechter (grijs) vlak = student studeert en maakt keuzes / onderwijsuitvoering (flexibel onderwijs).
+De onderstaande tabel interpreteert de plaat **"Hoofdplaat OKx informatiestromen v20260317.png"**. Alleen de flowlijnen die **niet blauw** (procedureel) en **niet oranje** (o.a. OKE/Edubroker) zijn, zijn opgenomen — dit zijn de informatiestromen die verder gespecificeerd moeten worden. De semantische beschrijving op of bij elke lijn in de plaat is overgenomen en waar nodig kort uitgebreid. **Context:** linkervlak = onderwijsontwikkeling, inrichting van nominale- en keuze aanbod; rechter (grijs) vlak = student studeert en maakt keuzes / onderwijsuitvoering (flexibel onderwijs).
 
 | Nr | Referentie component (van) | Referentie component (naar) | Semantische beschrijving informatiestroom | Context | Prioriteit |
 |----|----------------------------|-----------------------------|------------------------------------------|---------|------------|
@@ -51,9 +55,11 @@ De onderstaande tabel interpreteert de plaat **"Hoofdplaat OKx informatiestromen
 
 *Waar uit de plaat geen eenduidige tekst of component kon worden afgeleid staat *in aanbouw*; overige rijen kunnen door het kernteam worden aangevuld of verfijnd (circa 20 lijnen in de plaat).*
 
-## Relatie tot tweede repo (ArchiMate-model)
+## Relatie tot ArchiMate-model (in deze repo)
 
-Het functionele en technische ontwerp wordt ondersteund door een **tweede repository** met een **ArchiMate-model**. Die repo beschrijft de architectuur en processen; deze repo bevat de **koppelvlakspecificaties** en bijbehorende documentatie. Beide repos vullen elkaar aan: architectuur en koppelvlakken worden waar mogelijk synchroon gehouden.
+Het functionele en technische ontwerp wordt ondersteund door een **ArchiMate-model** in [`architecture/model/model.archimate`](../architecture/model/model.archimate). Dit model bevat o.a. **MOKA-koppelvlakspecificatie-views**; de view **01. Onderwijsvisie vertalen naar onderwijsaanbod - Basis Model** is een groot diagram om stroom **1** (curriculumontwerp → onderwijscatalogus) t/m 17 en aanverwante processen te verdiepen — zie [Informatiestromen, ArchiMate en MOKA-view](OKx_Informatiestromen-ArchiMate-en-MOKA-view.md).
+
+
 
 ## Werkwijze: async ontwikkelen
 
@@ -72,6 +78,8 @@ Het functionele en technische ontwerp wordt ondersteund door een **tweede reposi
 | Onderdeel | Locatie | Inhoud |
 |-----------|---------|--------|
 | OKx context | `doc/`, `img/` | Projectoverzicht, besluitboom/historie, informatiestromen, bijlagen |
+| Architectuurbesluiten (samenvatting) | [`doc/OKx_Architectuurbesluiten-en-impact.md`](OKx_Architectuurbesluiten-en-impact.md) | ADR’s, impact op keten/model |
+| ArchiMate en MOKA-view (gids) | [`doc/OKx_Informatiestromen-ArchiMate-en-MOKA-view.md`](OKx_Informatiestromen-ArchiMate-en-MOKA-view.md) | Hoofdplaat ↔ model ↔ Basis Model-view |
 | OKE uitwerking | `OKE/` | Eerste subdomein-uitwerking (o.a. examen: uitvoering en beoordeling) |
 | Generiek template | `moka-koppelvlakspecificaties/Template/` | MOKA-template en generieke instructies |
 
